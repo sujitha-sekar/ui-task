@@ -1,4 +1,4 @@
-@import '../../app.component.scss';
+@use '../../app.component' as *;
 
 .footer {
   background: #000;

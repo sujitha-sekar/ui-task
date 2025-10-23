@@ -1,4 +1,4 @@
-@import '../../app.component.scss';
+@use '../../app.component' as *;
 
 .bento-section {
   padding: 80px 50px;
