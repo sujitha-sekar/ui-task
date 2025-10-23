@@ -1,0 +1,133 @@
+$dark-bg: #000000;
+$primary-purple: #9333ea; 
+$light-text: #ffffff;
+$secondary-text: #b3b3b3;
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background-color: $dark-bg; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.circle-layer {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  opacity: 0; 
+}
+
+.circle-outer {
+  width: 300vw;
+  height: 300vw;
+  background-color: rgba($primary-purple, 0.05); 
+}
+
+.circle-middle {
+  width: 200vw;
+  height: 200vw;
+  background-color: rgba($primary-purple, 0.1);
+}
+
+.circle-inner {
+  width: 100vw;
+  height: 100vw;
+  background-color: rgba($primary-purple, 0.15);
+}
+
+.circle-center {
+  width: 60vw;
+  height: 60vw;
+  background-color: rgba($primary-purple, 0.25);
+  box-shadow: 0 0 150px rgba($primary-purple, 0.8);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+}
+
+.main-title {
+  color: $light-text;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  display: block; 
+  text-align: center;
+
+  .title-word {
+    display: inline-block;
+  }
+}
+
+.subtitle {
+  color: $secondary-text;
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0; 
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #6E00CF 0%, #32005F 100%);
+  color: $light-text;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background 0.3s ease-out;
+
+  .arrow-icon {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-out;
+  }
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba($primary-purple, 0.7);
+  background: linear-gradient(90deg, #32005F 0%, #6E00CF 100%);
+  
+  .arrow-icon {
+    transform: translateX(3px);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
